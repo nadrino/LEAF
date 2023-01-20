@@ -12,5 +12,10 @@ set( WCSIM_INCLUDE_DIR ${WCSIM_DIR}/include )
 include_directories( ${WCSIM_INCLUDE_DIR} )
 
 add_library( WCSimRoot SHARED IMPORTED )
-set_target_properties( WCSimRoot PROPERTIES IMPORTED_LOCATION ${WCSIM_DIR}/libWCSimRoot.dylib )
+
+if(APPLE)
+  set_target_properties( WCSimRoot PROPERTIES IMPORTED_LOCATION ${WCSIM_DIR}/libWCSimRoot.dylib )
+elseif(UNIX)
+  set_target_properties( WCSimRoot PROPERTIES IMPORTED_LOCATION ${WCSIM_DIR}/libWCSimRoot.so )
+endif()
 
