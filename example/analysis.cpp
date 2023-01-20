@@ -26,7 +26,7 @@
 
 #include "LEAF.hh"	
 #include "HKManager.hh"	
-#define WITH_BONSAI
+//#define WITH_BONSAI
 #ifdef WITH_BONSAI
 #include "WCSimBonsai.hh"
 #endif
