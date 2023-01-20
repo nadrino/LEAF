@@ -19,3 +19,4 @@ elseif(UNIX)
   set_target_properties( WCSimRoot PROPERTIES IMPORTED_LOCATION ${WCSIM_DIR}/libWCSimRoot.so )
 endif()
 
+install(TARGETS WCSimRoot DESTINATION lib)
