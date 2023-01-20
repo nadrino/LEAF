@@ -21,5 +21,5 @@ endif()
 
 set_target_properties( WCSimRoot PROPERTIES IMPORTED_LOCATION ${WCSIMROOT_LIB_FILE} )
 
-install( FILES ${WCSIMROOT_LIB_FILE} DESTINATION bin ) # import in bin and not lib
+install( FILES ${WCSIMROOT_LIB_FILE} DESTINATION lib )
 
